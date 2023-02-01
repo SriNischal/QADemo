@@ -14,6 +14,23 @@ test ('Login with invalid credentials using browser fixture', async({browser})=>
          await page.locator('#username').type("rahulshetty");
          await page.locator('#password').type("learning");
          await page.locator('#signInBtn').click();
-         await (await page.waitForSelector("[style*= block]")).waitForElementState("visible")
+         await (await page.waitForSelector("[style*= block]")).waitForElementState("visible");
          console.log(await page.locator("[style*= block]").textContent());
-       });
+         await expect(page.locator("[style*= block]")).toContainText("Incorrect");
+}
+)
+      
+test ('Login with valid credentials using page fixture', async({page})=>{ 
+               const userName = page.locator('#username');
+               const signIn = page.locator('#signInBtn');
+               const password = page.locator('#signInBtn');
+               await page.goto("https://rahulshettyacademy.com/loginpagePractise/")
+               await userName.type("rahulshettyacademy");
+               await password.type("learning");
+               await signIn.click();
+               console.log(await page.title());
+               //await expect (page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy');
+       
+        }
+        )
+       
