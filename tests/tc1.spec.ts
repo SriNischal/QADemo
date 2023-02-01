@@ -29,8 +29,7 @@ test ('Login with valid credentials using page fixture', async({page})=>{
                await password.type("learning");
                await signIn.click();
                console.log(await page.title());
-               //await expect (page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy');
-       
+               await expect (page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy');
         }
         )
        
