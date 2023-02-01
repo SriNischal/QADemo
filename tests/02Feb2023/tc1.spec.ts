@@ -13,6 +13,7 @@ test ('Login with invalid credentials using browser fixture', async({browser})=>
          await page.locator('#username').type("rahulshetty");
          await page.locator('#password').type("learning");
          await page.locator('#signInBtn').click;
-         console.log(await page.locator("[style='display: block;']").textContent());
+         console.log(page.locator("[style*='block']").textContent);
+
        });
 
