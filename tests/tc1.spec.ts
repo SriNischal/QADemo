@@ -17,8 +17,7 @@ test ('Login with invalid credentials using browser fixture', async({browser})=>
          await (await page.waitForSelector("[style*= block]")).waitForElementState("visible");
          console.log(await page.locator("[style*= block]").textContent());
          await expect(page.locator("[style*= block]")).toContainText("Incorrect");
-}
-)
+});
       
 test ('Login with valid credentials using page fixture', async({page})=>{ 
                const userName = page.locator('#username');
@@ -28,8 +27,8 @@ test ('Login with valid credentials using page fixture', async({page})=>{
                await userName.type("rahulshettyacademy");
                await password.type("learning");
                await signIn.click();
-               console.log(await page.title());
-               await expect (page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy');
-        }
-        )
-       
+               const loginpagetitle = await page.title();
+               console.log(loginpagetitle);
+               await expect (page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
+        });
+      
