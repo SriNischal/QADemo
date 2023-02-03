@@ -62,7 +62,7 @@ test('Handling child window scenario', async({browser})=>{
 
     ])
     const text = page.locator('.red').textContent();
-    console.log(text)
+    //console.log(text)
 
 })
 
