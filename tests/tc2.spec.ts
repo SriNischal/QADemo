@@ -61,8 +61,8 @@ test('Handling child window scenario', async({browser})=>{
         await blinktxtlocator2.click(),
 
     ])
-    const text = page.locator('.red').textContent();
-    console.log(text)
+    //const text = page.locator('.red').textContent();
+    //console.log(text)
 
 })
 
