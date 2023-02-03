@@ -44,7 +44,7 @@ test('Handling pop-up when user select radio button & CheckBox', async({page})=>
 }
 )
 
-test.only('Check text is blicking or not',async({page})=>{
+test('Check text is blicking or not',async({page})=>{
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
     const blinktxtlocator1 = page.locator('.blinkingText');
     await expect(blinktxtlocator1).toHaveAttribute("class","blinkingText");
@@ -61,8 +61,8 @@ test('Handling child window scenario', async({browser})=>{
         await blinktxtlocator2.click(),
 
     ])
-    //const text = page.locator('.red').textContent();
-    //console.log(text)
+    const text = page.locator('.red').textContent();
+    console.log(text)
 
 })
 
