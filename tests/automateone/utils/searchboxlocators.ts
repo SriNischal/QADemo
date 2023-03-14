@@ -1,0 +1,36 @@
+export class searchlocators{
+    baseURL = "https://automatenow.io/sandbox-automation-testing-practice-website/"
+    URL = "https://automatenow.io/sandbox-automation-testing-practice-website/search-box/"
+    searchbtn = "//a[text()='Search Boxes']"
+    actualsearchtitle = "//h1[text()='Search Boxes']"
+    expectedsearchtitle = "Search Boxes"
+    actualsearchboxtext = "//label[text()='Search Blog Articles (e.g., Cypress, JMeter, Selenium, Hamcrest, etc.)']"
+    expectedsearchboxtext = "Search Blog Articles (e.g., Cypress, JMeter, Selenium, Hamcrest, etc.)"
+    searchboxclick = "//div/input[@type='search']"
+    text = "cypress"
+    submitbtn = "//button[text()='Search']"
+    actualsearchpagetitle = "//h1[text()='Search Results for: cypress']"
+    expecetdsearchpagetitle = "Search Results for: cypress"
+    actualsearchedtext = "//a[text()='Cypress vs Selenium: Collision of Champions 2022']"
+    expectedsearchedtext = "Cypress vs Selenium: Collision of Champions 2022"
+    actualsearchedmessage = "//p[text()='All you need to know in the battle of Cypress vs Selenium The testing community is being taken by storm']"
+    expectedsearchmessage = "All you need to know in the battle of Cypress vs Selenium The testing community is being taken by storm…"
+    actualmessage = "//h2[text()='All you need to know in the battle of Cypress vs Selenium']"
+    expectedmessage = "All you need to know in the battle of Cypress vs Selenium"
+    actualheader = "//h1[text()='Cypress vs Selenium: Collision of Champions 2022']"
+    expectedheader = "Cypress vs Selenium: Collision of Champions 2022"
+    cypressbtn = "//a[text()='Cypress']"
+    seleniumbtn = "//a[text()='Selenium']"
+    actualcypresstitile = "//span[@class='tax-name']"
+    expectedcypresstitle ="Category: Cypress"
+    expectedseleniumtitle = "Category: Selenium"
+    actualcypresstext = "//a[text()='Cypress vs Selenium: Collision of Champions 2022']"
+    expectedcypresstext = "Cypress vs Selenium: Collision of Champions 2022"
+    actualvalidationmessage = "('#post-1061 div').nth(2)"
+    expectedvalidationmessage = "Please fill out this field."
+    image = "//img[@data-attachment-id='4374']"
+    actualimagepath = {path: "image-vaidation-6-win32.png"}
+    expectedimagepath = '/sandbox_carousel.spec.ts-snapshots/image-vaidation-6-win32.png'
+
+
+}
